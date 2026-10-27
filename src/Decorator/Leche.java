@@ -1,0 +1,21 @@
+package Decorator;
+
+// Leche.java
+// DECORADOR CONCRETO: agrega comportamiento antes o despues de delegar.
+public class Leche extends AdicionBebida {
+
+    protected Leche(Bebida bebida) {
+        super(bebida);
+    }
+
+    @Override
+    public String descripcion() {
+        return super.descripcion() + " + Leche";
+    }
+
+    @Override
+    public double costo() {
+        return super.costo() + 1000;
+    }
+
+}
